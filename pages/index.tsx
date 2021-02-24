@@ -1,14 +1,14 @@
-import Link from "next/link";
 import Layout from "../components/Layout";
 
 const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋 ------- </h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
+  <Layout title="Parking Lots">
+    <h1>Available spots</h1>
+    <ul>
+      <li>84.</li>
+      <li>85.</li>
+      <li>86.</li>
+      <li>87.</li>
+    </ul>
   </Layout>
 );
 
