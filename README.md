@@ -20,7 +20,7 @@ Please try to gain all badges:
 - 👾 _know react_ - ubnderstand Components, props, 'useState', 'useEffect'
 - 🏂🏽 _integrator_ - touch the integration layer and make a footprint there
 - 🐛 _bug hunter_ - find the most strange bug ever
-- 🐙 _aliases master_ - I use git aliases, i know all of them by heart 😂
+- 🐙 _aliases master_ - I use git aliases, I know all of them by heart 😂
 
 # The big game records
 
