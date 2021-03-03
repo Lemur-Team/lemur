@@ -21,7 +21,9 @@ Please try to gain all badges:
 - 🎨 _i am flexible_ - I know how _flex_ with CSS3 works and I am using it everywhere! 
 - 🏂🏽 _integrator_ - touch the integration layer and make a footprint there
 - 🐛 _bug hunter_ - find the most strange bug ever
+- 🐙 _aliases master_ - I use git aliases, I know all of them by heart 😂
 
 # The big game records
 
 - Tom R. - 👊🏻 👾
+- Alex A. - 👊🏻 🎨 🐙
