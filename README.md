@@ -15,6 +15,7 @@
 
 Please try to gain all badges:
 
+- 👊🏻 _Already did my first commit_
 - 🖖🏾 _shortcuts like a boss_ - if you can use all that CTRL-S, CTRL-C, CTRL-V and in the VS Code CTRl-P, CTRL-SHIFT-P, CTRL-SHIFT-S...
 - 👾 _know react_ - ubnderstand Components, props, 'useState', 'useEffect'
 - 🏂🏽 _integrator_ - touch the integration layer and make a footprint there
@@ -22,4 +23,4 @@ Please try to gain all badges:
 
 # The big game records
 
-- Tom R. - 👾
+- Tom R. - 👊🏻 👾
