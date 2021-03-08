@@ -8,7 +8,7 @@
 # Process
 
 1. We are doing scrum
-2. There is our Jira - TBD
+2. [There is our Jira](https://parkovani.atlassian.net/jira/software/projects/PARK/boards/1/backlog)
 3. Our design studies - TBD
 
 # The big game
