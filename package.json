@@ -1,6 +1,12 @@
 {
   "name": "with-typescript",
   "version": "1.0.0",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
   "scripts": {
     "dev": "next",
     "build": "next build",
