@@ -32,4 +32,4 @@ Please try to gain all badges:
 
 Powered by:
 
-[![Foo](vercel-logo.png)](https://vercel.com/?utm_source=lemur&utm_campaign=oss)
+[![Foo](vercel-logo.png)](https://vercel.com/?utm_source=lemur-team&utm_campaign=oss)

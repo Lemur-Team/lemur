@@ -40,7 +40,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
       <span>I'm here to stay (Footer)</span>
     </footer>
     <br />
-    <a href="https://vercel.com/?utm_source=lemur&utm_campaign=oss">
+    <a href="https://vercel.com/?utm_source=lemur-team&amp;utm_campaign=oss">
       <img
         style={{ width: "120px" }}
         src="vercel-logo.png"
