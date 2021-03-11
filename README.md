@@ -1,15 +1,13 @@
 # Lemur
 
+- **The prod environment**: https://lemur-prod.vercel.app
+- Tickets, docs, videos: https://parkovani.atlassian.net/browse/PARK
+- Hosting: https://vercel.com/lemur-team
+
 # How to install
 
 - `yarn` to install packages
 - `yarn dev` to run the server
-
-# Process
-
-1. We are doing scrum
-2. There is our Jira - TBD
-3. Our design studies - TBD
 
 # The big game
 
