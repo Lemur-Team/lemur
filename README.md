@@ -1,6 +1,6 @@
 # Lemur
 
-- **The prod environment**: https://lemur-prod.vercel.app
+- **The service**: https://lemur-prod.vercel.app
 - Tickets, docs, videos: https://parkovani.atlassian.net/browse/PARK
 - Hosting: https://vercel.com/lemur-team
 
