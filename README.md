@@ -1,4 +1,4 @@
-# Lemur 
+# Lemur
 
 The Frontend Training program. Build an app in few weeks.
 
@@ -30,8 +30,8 @@ Please try to gain all badges:
 - Alex A. - 👊🏻 🎨 🐙
 - Jindra S. - 👊🏻 🎬
 
------------
+---
 
 Powered by:
 
-[![Foo](vercel-logo.png)](https://vercel.com/?utm_source=[lemurteam]&utm_campaign=oss)
+[![Foo](vercel-logo.png)](https://vercel.com/?utm_source=lemur&utm_campaign=oss)

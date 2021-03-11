@@ -39,6 +39,14 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
       <hr />
       <span>I'm here to stay (Footer)</span>
     </footer>
+    <br />
+    <a href="https://vercel.com/?utm_source=lemur&utm_campaign=oss">
+      <img
+        style={{ width: "120px" }}
+        src="vercel-logo.png"
+        alt="powered by vercel"
+      />
+    </a>
   </div>
 );
 
