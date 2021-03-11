@@ -2,8 +2,6 @@
 
 The Frontend Training program. Build an app in few weeks.
 
-- **The service**: https://lemur-prod.vercel.app
-
 # How to install
 
 - `yarn` to install packages
