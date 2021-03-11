@@ -1,6 +1,6 @@
 # Lemur 
 
-- The Training program
+The Frontend Training program. Build an app in few weeks.
 
 - **The service**: https://lemur-prod.vercel.app
 
@@ -32,5 +32,6 @@ Please try to gain all badges:
 
 -----------
 
-Powered by
+Powered by:
+
 [![Foo](vercel-logo.png)](https://vercel.com/?utm_source=[lemurteam]&utm_campaign=oss)
