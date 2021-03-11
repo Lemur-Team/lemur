@@ -1,8 +1,8 @@
-# Lemur
+# Lemur 
+
+The Frontend Training program. Build an app in few weeks.
 
 - **The service**: https://lemur-prod.vercel.app
-- Tickets, docs, videos: https://parkovani.atlassian.net/browse/PARK
-- Hosting: https://vercel.com/lemur-team
 
 # How to install
 
@@ -29,3 +29,9 @@ Please try to gain all badges:
 - Tom R. - 👊🏻 👾
 - Alex A. - 👊🏻 🎨 🐙
 - Jindra S. - 👊🏻 🎬
+
+-----------
+
+Powered by:
+
+[![Foo](vercel-logo.png)](https://vercel.com/?utm_source=[lemurteam]&utm_campaign=oss)
