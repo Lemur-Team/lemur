@@ -21,12 +21,14 @@ Please try to gain all badges:
 - 🎬 _newbie_ - seen first tutorial video. Let’s go!
 - 📖 _student_ - seen more than 5 tutorial videos and I am not afraid to use the knowledge
 - 🧑‍🏫 _teacher_ - I have shared my knowledge to others
+- 🖥️ _proactive_ - did my first PR comment
 
 # The big game records
 
 - Tom R. - 👊🏻 👾
 - Alex A. - 👊🏻 🎨 🐙
-- Jindra S. - 👊🏻 🎬
+- Jindra S. - 👊🏻 🎬 📖
+- Lukas M. - 👊🏻 🎬 📖
 
 ---
 
