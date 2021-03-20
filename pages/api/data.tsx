@@ -20,18 +20,24 @@ export default async (_: NextApiRequest, res: NextApiResponse) => {
   const database = firebase.database();
   const userDatebaseRef = database.ref("user");
 
+  var username = "test";
+  var email = "email";
+  var password = "test";
+
   // SET DATA TO DB
   userDatebaseRef.set({
     tom: {
-      username: "",
-      email: "",
-      password: "",
+      username,
+      email,
+      password,
     },
   });
   // READ DATA FROM DB
   //const value = await(await userDatebaseRef.once("value")).val();
 
   res.status(200).json({
-    name: "John Doe",
+    username,
+    email,
+    password,
   });
 };

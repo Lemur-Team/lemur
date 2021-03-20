@@ -9,6 +9,24 @@ const IndexPage = () => (
       <li>86.</li>
       <li>87.</li>
     </ul>
+
+    <form action="/api/data" method="POST">
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="test@example.com"
+      />
+      <br />
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="password"
+      />
+      <br />
+      <button type="submit">Register</button>
+    </form>
   </Layout>
 );
 
