@@ -1,7 +1,13 @@
+import { useRef } from "react";
 import Layout from "../components/Layout";
 
-const IndexPage = () => (
-  <Layout title="Parking Lots">
+const IndexPage = () => {
+  const sendData= () => fetch("/api/data", {method:"POST",body:JSON.stringify({login:refLogin?.current?.value, password:refPassword?.current?.value})})
+  
+  const refLogin = useRef<HTMLInputElement>(null);
+  const refPassword = useRef<HTMLInputElement>(null);
+
+  return <Layout title="Parking Lots">
     <h1>Available spots</h1>
     <ul>
       <li>84.</li>
@@ -10,24 +16,25 @@ const IndexPage = () => (
       <li>87.</li>
     </ul>
 
-    <form action="/api/data" method="POST">
+    
       <input
         type="email"
         name="email"
-        id="email"
+        ref={refLogin}
         placeholder="test@example.com"
       />
       <br />
       <input
         type="password"
         name="password"
-        id="password"
+        ref={refPassword}
         placeholder="password"
       />
       <br />
-      <button type="submit">Register</button>
-    </form>
+      <button onClick={sendData}>Register</button>
+    
   </Layout>
-);
+};
+
 
 export default IndexPage;

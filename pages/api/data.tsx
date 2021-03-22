@@ -11,7 +11,8 @@ const clientCredentials = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
-export default async (_: NextApiRequest, res: NextApiResponse) => {
+export default async (req: NextApiRequest, res: NextApiResponse) => {
+  console.log(req.body)
   // DB connection
   if (!firebase.apps.length) {
     firebase.initializeApp(clientCredentials);
