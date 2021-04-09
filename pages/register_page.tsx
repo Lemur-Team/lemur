@@ -22,12 +22,13 @@ const IndexPage = () => {
     <title>Register page</title>
   </Head>
   <body>
+    <label>
     <input
         type="email"
         name="email"
         ref={refEmail}
         placeholder="test@example.com"
-      />
+      /></label>
       <br />
       <input
         type="password"
