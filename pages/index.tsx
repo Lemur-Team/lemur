@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Head from "next/head";
 import React from "react";
-import Layout from "../components/Layout";
+// import Layout from "../components/Layout";
 
 function Login() {
   return (
-    <Layout>
+    <div>
       <Head>
         <title>Test page</title>
       </Head>
@@ -18,7 +18,7 @@ function Login() {
         <br />
         Take me to <Link href="/register_page"> register </Link> new lemur
       </body>
-    </Layout>
+    </div>
   );
 }
 export default Login;

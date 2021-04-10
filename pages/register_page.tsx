@@ -16,31 +16,34 @@ const IndexPage = () => {
   const refEmail = useRef<HTMLInputElement>(null);
   const refPassword = useRef<HTMLInputElement>(null);
 
-  return(
-<div>
-  <Head>
-    <title>Register page</title>
-  </Head>
-  <body>
-    <label>
-    <input
-        type="email"
-        name="email"
-        ref={refEmail}
-        placeholder="test@example.com"
-      /></label>
-      <br />
-      <input
-        type="password"
-        name="password"
-        ref={refPassword}
-        placeholder="password"
-      />
-      <br />
-      <button onClick={sendData}>Register</button>
-  <br/>
-  Take me to <Link href="/"> login </Link> page
-  </body>
-</div>);}
+  return (
+    <div>
+      <Head>
+        <title>Register page</title>
+      </Head>
+      <body>
+        <label>
+          <input
+            type="email"
+            name="email"
+            ref={refEmail}
+            placeholder="test@example.com"
+          />
+        </label>
+        <br />
+        <input
+          type="password"
+          name="password"
+          ref={refPassword}
+          placeholder="password"
+        />
+        <br />
+        <button onClick={sendData}>Register</button>
+        <br />
+        Take me to <Link href="/"> login </Link> page
+      </body>
+    </div>
+  );
+};
 
 export default IndexPage;
