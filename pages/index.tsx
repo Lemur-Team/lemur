@@ -9,14 +9,13 @@ function Login() {
       <Head>
         <title>Test page</title>
       </Head>
-      <body>
-        <input placeholder="email@example.com" />
-        <br />
-        <input placeholder="password" />
-        <br />
-        <button>Login</button>
-        <br />
-      </body>
+
+      <input placeholder="email@example.com" />
+      <br />
+      <input placeholder="password" />
+      <br />
+      <button>Login</button>
+      <br />
     </Layout>
   );
 }

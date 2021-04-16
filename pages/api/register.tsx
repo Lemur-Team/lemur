@@ -1,6 +1,7 @@
 import firebase from "firebase";
 import { NextApiRequest, NextApiResponse } from "next";
 import crypto from "crypto";
+import { encode } from "../../utils/emailEncoder";
 
 const clientCredentials = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -21,7 +22,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   var email = String(user.email);
   var password = String(user.password);
 
-  if (email.length === 0) {
+  if (!email) {
     res.status(400).send("Empty email");
     return;
   }
@@ -36,40 +37,36 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     return;
   }
 
-  var pwdLength = password.length;
-  console.log("Password length is " + pwdLength);
-
   const passhash = crypto
     .createHash("md5")
     .update("doTheMagicTrick" + password)
     .digest("hex");
-  console.log(passhash);
-  //workaround for ids
-  var username = String(email.substring(0, email.lastIndexOf("@")));
-  console.log("Username: " + username);
 
   try {
-    res.status(200).send("user registered");
+    if (!firebase.apps.length) {
+      firebase.initializeApp(clientCredentials);
+    }
+
+    const database = firebase.database();
+    const userDatebaseRef = database.ref(`users/${encode(email)}`);
+
+    const record = await (await userDatebaseRef.once("value")).val();
+
+    if (!!record) {
+      res.status(400).send("User already exists");
+      return;
+    }
+
+    userDatebaseRef.set({
+      email,
+      passhash,
+    });
+
+    // todo - write login user (create session)
+
+    res.send("Welcome");
   } catch (err) {
-    res.status(500).json({ statusCode: 500, message: "err.message" });
+    console.error("DB Error", err);
+    res.status(500).send("DB Error");
   }
-
-  // DB connection
-  if (!firebase.apps.length) {
-    firebase.initializeApp(clientCredentials);
-  }
-
-  const database = firebase.database();
-  const userDatebaseRef = database.ref(username);
-
-  // SET DATA TO DB
-  // Empty password validation
-
-  userDatebaseRef.set({
-    email,
-    passhash,
-  });
-
-  // READ DATA FROM DB
-  //const value = await(await userDatebaseRef.once("value")).val();
 };

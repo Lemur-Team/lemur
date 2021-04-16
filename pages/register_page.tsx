@@ -1,20 +1,26 @@
 import React, { useState } from "react";
 import { useRef } from "react";
+import { useRouter } from "next/router";
 import Layout from "../components/Layout";
 
 const IndexPage = () => {
+  const router = useRouter();
   const [error, setError] = useState<string>();
 
   const sendData = async () => {
     setError("");
+    const email = refEmail?.current?.value;
+
     const res = await fetch("/api/register", {
       method: "POST",
       body: JSON.stringify({
-        email: refEmail?.current?.value,
+        email,
         password: refPassword?.current?.value,
       }),
     });
-    if (res.status === 400) {
+    if (res.status === 200) {
+      router.push("/");
+    } else {
       setError(await res.text());
     }
   };
