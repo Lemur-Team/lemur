@@ -18,7 +18,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
     <header>
       <nav>
         <div>
-          <Link href="/home_page">
+          {/* <Link href="/home_page">
             <a>Home</a>
           </Link>{" "}
           |{" "}
@@ -32,8 +32,10 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
           |{" "}
           <Link href="/users">
             <a>Users List</a>
-          </Link>{" "}
-          {/* | <a href="/api/users">Users API</a> */}| <a href="/">Logout</a>
+          </Link>{" "} */}
+          {/* | <a href="/api/users">Users API</a>| <a href="/">Logout</a> */}
+          <Link href="/"> login </Link> |{" "}
+          <Link href="/register_page"> register </Link>
         </div>
         <div></div>
       </nav>
