@@ -1,5 +1,8 @@
 import { useRef } from "react";
+import Head from "next/head";
+import React from "react";
 import Layout from "../components/Layout";
+// import Layout from "../components/Layout";
 
 const IndexPage = () => {
   const loginEl = useRef<HTMLInputElement>(null);
@@ -35,5 +38,20 @@ const IndexPage = () => {
     </Layout>
   );
 };
+function Login() {
+  return (
+    <Layout>
+      <Head>
+        <title>Test page</title>
+      </Head>
 
-export default IndexPage;
+      <input placeholder="email@example.com" />
+      <br />
+      <input placeholder="password" />
+      <br />
+      <button>Login</button>
+      <br />
+    </Layout>
+  );
+}
+export default Login;
