@@ -1,34 +1,42 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { sampleUserData } from "../../utils/sample-data";
-import crypto from "crypto";
 import { Session, withIronSession } from "next-iron-session";
+import firebase from "firebase";
+import { clientCredentials } from "../../utils/database";
+import { encode } from "../../utils/emailEncoder";
+import { getPasshash } from "../../utils/password";
 
 const handler = async (
   req: NextApiRequest & { session: Session },
   res: NextApiResponse
 ) => {
+  const body = JSON.parse(req.body);
+  const login = String(body.login);
+  const password = String(body.password);
+  const passhash = getPasshash(password);
+  console.log(passhash, login);
   try {
-    const body = JSON.parse(req.body);
-    const login = String(body.login);
-    const password = String(body.password);
-    const passhash = crypto
-      .createHash("md5")
-      .update("nasekouzelneslovo" + password)
-      .digest("hex");
-    console.log(passhash, login);
-    if (login === "vlk" && passhash === "b62b380e08439a53d02fc44aff759072") {
+    if (!firebase.apps.length) {
+      firebase.initializeApp(clientCredentials);
+    }
+
+    const database = firebase.database();
+    const userDatebaseRef = database.ref(`users/${encode(login)}`);
+
+    const record = await (await userDatebaseRef.once("value")).val();
+    console.log(record, passhash);
+    if (!!record && record.passhash === passhash) {
       req.session.set("user", {
-        id: 230,
-        admin: true,
+        login,
       });
       await req.session.save();
       res.status(200).send("welcome");
-    } else {
-      res.status(401).send("go away from our village");
+      return;
     }
+
+    res.status(401).send("go away from our village");
   } catch (err) {
-    console.error("login error", err);
-    res.status(500).json({ statusCode: 500, message: "err.message" });
+    console.error("DB Error", err);
+    res.status(500).send("DB Error");
   }
 };
 

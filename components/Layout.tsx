@@ -15,16 +15,6 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       {/* <link href="style.css" rel="stylesheet" /> */}
     </Head>
-    <header>
-      <nav>
-        <div>
-          {/* To do: Clever navbar based on users location */}
-          <Link href="/"> login </Link> |{" "}
-          <Link href="/register_page"> register </Link>
-        </div>
-        <div></div>
-      </nav>
-    </header>
     {children}
     <footer>
       <hr />
