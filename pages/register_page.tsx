@@ -30,6 +30,7 @@ const IndexPage = () => {
 
   return (
     <Layout title="Register page">
+      <h2>Registration:</h2>
       <label>
         <input
           type="email"
