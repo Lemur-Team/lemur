@@ -1,15 +1,22 @@
+import Head from "next/head";
+import React from "react";
 import Layout from "../components/Layout";
+// import Layout from "../components/Layout";
 
-const IndexPage = () => (
-  <Layout title="Parking Lots">
-    <h1>Available spots</h1>
-    <ul>
-      <li>84.</li>
-      <li>85.</li>
-      <li>86.</li>
-      <li>87.</li>
-    </ul>
-  </Layout>
-);
+function Login() {
+  return (
+    <Layout>
+      <Head>
+        <title>Test page</title>
+      </Head>
 
-export default IndexPage;
+      <input placeholder="email@example.com" />
+      <br />
+      <input placeholder="password" />
+      <br />
+      <button>Login</button>
+      <br />
+    </Layout>
+  );
+}
+export default Login;
